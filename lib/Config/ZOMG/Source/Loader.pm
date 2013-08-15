@@ -113,6 +113,11 @@ sub find {
     return grep { -f $_ } $self->_find_files;
 }
 
+sub find {
+    my $self = shift;
+    return grep { -f $_ } $self->_find_files;
+}
+
 sub _load_files {
     my $self = shift;
     my $files = shift;
